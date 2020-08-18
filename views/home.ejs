@@ -1,11 +1,15 @@
 <%-include("partials/header");-%>
-    <h1>Home</h1>
-      <p><%=homeStartingContent%></p>
-<%for(var i=0;i<posts.length;i++)
-{%>
-  <h1><%=posts[i].title%></h1>
-  <%var topic=posts[i].title%>
-  <p><%=posts[i].body.substring(0,100)+"... "%><a href="/posts/:<%=posts[i].title%>">Read more</a></p>
+      <h1>Home</h1>
+      <p class="content"><%=homeStartingContent%></p>
 
-<%}%>
+      <br>
+      <form class="" action="/compose" method="get">
+        <button type="submit" name="button" class="btn btn-outline-light btn-lg">Compose</button>
+      </form>
+      <hr>
+      <br>
+           <%posts.forEach(function(post){%>
+      <h2><%=post.title%></h2>
+      <p><%=post.content+"... "%><a href="/posts/:<%=post._id%>">Read more</a></p>
+<%})%>
 <%-include("partials/footer");-%>
