@@ -5,7 +5,7 @@ const ejs = require("ejs");
 const _ = require('lodash');
 const mongoose=require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/blogDB",{useNewUrlParser:true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://blogpost:123456@crA@cluster0.gehi3.mongodb.net/blogDB",{useNewUrlParser:true, useUnifiedTopology: true });
 
 //const blogSchema=mongoose.Schema({name:String,content:String});
 const composeSchema=mongoose.Schema({title:String,content:String});
