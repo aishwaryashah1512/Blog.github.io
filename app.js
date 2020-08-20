@@ -77,7 +77,7 @@ app.get("/compose",function(req,res)
 res.render("compose");
 });
 
-let port=process.env.PORT;
+/*let port=process.env.PORT;
 if(port==null||port="")
 {
   port=3000;
@@ -86,4 +86,5 @@ if(port==null||port="")
 app.listen(port,function()
 {
   console.log("Server started on port ");
-});
+});*/
+app.listen(process.env.PORT || 3000);
