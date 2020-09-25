@@ -1,8 +1,13 @@
 .content
 {
   font-size:2rem;
+
   }
-  
+p.bg
+{
+  background-image:"image.jpg";
+}
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
